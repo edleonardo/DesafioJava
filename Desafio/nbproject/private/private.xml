@@ -3,15 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Z:/Java/Challenge/Desafio/src/Estado/EstadoMenu.java</file>
-            <file>file:/Z:/Java/Challenge/Desafio/src/Estado/EstadoLogin.java</file>
-            <file>file:/Z:/Java/Challenge/Desafio/src/Estado/EstadoCadastroPedido.java</file>
-            <file>file:/Z:/Java/Challenge/Desafio/src/Estado/EstadoCadastroProduto.java</file>
-            <file>file:/Z:/Java/Challenge/Desafio/src/Estado/EstadoCadastro.java</file>
-            <file>file:/Z:/Java/Challenge/Desafio/src/Estado/MaquinaEstado.java</file>
-            <file>file:/Z:/Java/Challenge/Desafio/src/desafio/Desafio.java</file>
-            <file>file:/Z:/Java/Challenge/Desafio/src/Estado/EnumEstadoConsole.java</file>
-            <file>file:/Z:/Java/Challenge/Desafio/src/Estado/EstadoCadastroFuncionario.java</file>
+            <file>file:/Z:/DesafioJava/DesafioJava/Desafio/src/Estado/EstadoLogin.java</file>
+            <file>file:/Z:/DesafioJava/DesafioJava/Desafio/src/desafio/Desafio.java</file>
         </group>
     </open-files>
 </project-private>
