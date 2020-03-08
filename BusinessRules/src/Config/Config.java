@@ -5,12 +5,15 @@
  */
 package Config;
 
+import Objects.Usuario;
+
 /**
  *
  * @author 082170006
  */
 public class Config {
     private static Config uniqueInstance;
+    private static Usuario usuario;
     
     private Config() {
     
@@ -22,6 +25,15 @@ public class Config {
         
         return uniqueInstance;
     }
+   
+        
     
+    public void SetUsuario(Usuario user){
+           usuario = user;
+    }
+    
+   public  Usuario GetUsuario(Usuario user){
+          return usuario ;
+    }
     
 }
