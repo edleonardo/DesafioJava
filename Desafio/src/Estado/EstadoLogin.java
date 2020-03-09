@@ -30,8 +30,7 @@ public class EstadoLogin extends MaquinaEstado {
         // TODO - Validação de senha
         UsuarioDAO DAO = new UsuarioDAO();
         int Flag = DAO.ValidaUsuario(user);
-        if (Flag != 3){
-            System.out.println("Deu Certo");     
+        if (Flag != 3){  
           user.SetFlag(Flag);
           Config.getInstance().SetUsuario(user);
           Desafio.estado = EnumEstadoConsole.MENU.getEstadoMaquina();

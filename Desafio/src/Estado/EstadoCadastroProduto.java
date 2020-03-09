@@ -5,6 +5,13 @@
  */
 package Estado;
 
+import DAO.FuncionarioDAO;
+import DAO.ProdutoDAO;
+import Objects.Funcionario;
+import Objects.Produto;
+import desafio.Desafio;
+import java.util.Scanner;
+
 /**
  *
  * @author 082170006
@@ -13,7 +20,29 @@ public class EstadoCadastroProduto extends MaquinaEstado {
 
     @Override
     public boolean Executa() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        boolean sair = false;
+        try {
+        Produto prod  = new Produto();
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Digite a descrição do Produto");
+        prod.SetDescricao(scan.nextLine());
+        System.out.println("Digite o Valor");     
+        prod.SetPreco(Double.parseDouble(scan.nextLine()));
+
+        // TODO - Validação de senha
+        ProdutoDAO DAO = new ProdutoDAO();
+         DAO.SalvarProduto(prod);
+         Desafio.estado = EnumEstadoConsole.MENU.getEstadoMaquina();
+   
+        } catch (NumberFormatException e) {
+        System.out.println("Digite somente numeros no campo por valor");     
+        return false; 
+        }
+        catch (Exception e) {
+            System.err.printf("Erro ao salvar Produto \n",
+            e.getMessage());
+        }
+      return sair;
     }
-    
 }
