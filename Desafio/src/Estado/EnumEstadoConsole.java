@@ -16,7 +16,8 @@ public enum EnumEstadoConsole {
     CADASTRO (new EstadoCadastro()),
     CADASTRO_PRODUTO (new EstadoCadastroProduto()),
     CADASTRO_PEDIDO (new EstadoCadastroPedido()),
-    CADASTRO_FUNCIONARIO (new EstadoCadastroFuncionario());
+    CADASTRO_FUNCIONARIO (new EstadoCadastroFuncionario()),
+    CADASTRO_CLIENTE (new EstadoCadastroCliente());
     
     private final MaquinaEstado estadoMaquina;   
         

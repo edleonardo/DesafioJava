@@ -18,20 +18,21 @@ public class UsuarioDAO {
     public int ValidaUsuario(Usuario user ){
            int retorno = 3;
                  try {
-                   String nome = "Z:\\DesafioJava\\DesafioJava\\Usuario.txt";
+                  String nome = "Z:\\DesafioJava\\DesafioJava\\Usuario.txt";
                   FileReader arq = new FileReader(nome);
                   BufferedReader lerArq = new BufferedReader(arq);
 
-                  String linha = lerArq.readLine();
+                  String linha =  linha = lerArq.readLine(); ;
                   while (linha != null) {
                  
                    
-                    linha = lerArq.readLine(); // lê da segunda até a última linha
-                    String[] usuario = linha.split("|");
+                    // lê da segunda até a última linha
+                    String[] usuario = linha.split(";");
                   
-                    if(usuario[0] == user.GetUsuario() && usuario[1] ==user.GetSenha()){
+                    if(usuario[0].equals(user.GetUsuario()) && usuario[1].equals(user.GetSenha())){
                         return Integer.parseInt(usuario[2]);
                     }
+                     linha = lerArq.readLine();
                   }
                   arq.close();
                   return retorno;

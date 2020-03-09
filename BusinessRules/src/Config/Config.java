@@ -32,7 +32,7 @@ public class Config {
            usuario = user;
     }
     
-   public  Usuario GetUsuario(Usuario user){
+   public  Usuario GetUsuario(){
           return usuario ;
     }
     

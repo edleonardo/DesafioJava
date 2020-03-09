@@ -11,4 +11,6 @@ package Estado;
  */
 public abstract class MaquinaEstado {
     public abstract boolean Executa();
+    
+    
 }

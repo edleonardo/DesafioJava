@@ -1,3 +1,2 @@
-eduardo|123|1
-jonathan|123|1
-123|123|0
+123;123;1
+teste;teste;teste
