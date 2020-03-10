@@ -10,7 +10,9 @@ import DAO.ProdutoDAO;
 import Objects.Pedido;
 import Objects.Produto;
 import desafio.Desafio;
-import java.util.ArrayList;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -54,7 +56,6 @@ public class EstadoCadastroPedido extends MaquinaEstado {
 
             if (Integer.parseInt(scan.nextLine()) == 1) {
                 DAOPedido.Imprimir(pedido);
-
             }
             pedido.SetQuantidade(Integer.parseInt(scan.nextLine()));
 

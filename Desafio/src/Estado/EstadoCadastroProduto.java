@@ -22,27 +22,27 @@ public class EstadoCadastroProduto extends MaquinaEstado {
     public boolean Executa() {
         boolean sair = false;
         try {
-        Produto prod  = new Produto();
-        Scanner scan = new Scanner(System.in);
+            Produto prod = new Produto();
+            Scanner scan = new Scanner(System.in);
 
-        System.out.println("Digite a descrição do Produto");
-        prod.SetDescricao(scan.nextLine());
-        System.out.println("Digite o Valor");     
-        prod.SetPreco(Double.parseDouble(scan.nextLine()));
+            System.out.println("Digite a descrição do Produto");
+            prod.SetDescricao(scan.nextLine());
+            System.out.println("Digite o Valor");
+            prod.SetPreco(Double.parseDouble(scan.nextLine()));
 
-        // TODO - Validação de senha
-        ProdutoDAO DAO = new ProdutoDAO();
-         DAO.SalvarProduto(prod);
-         Desafio.estado = EnumEstadoConsole.MENU.getEstadoMaquina();
-   
+            // TODO - Validação de senha
+            ProdutoDAO DAO = new ProdutoDAO();
+            DAO.SalvarProduto(prod);
+            Desafio.estado = EnumEstadoConsole.MENU.getEstadoMaquina();
+
         } catch (NumberFormatException e) {
-        System.out.println("Digite somente numeros no campo por valor");     
-        return false; 
-        }
-        catch (Exception e) {
+            System.out.println("Digite somente numeros no campo por valor");
+            return false;
+        } catch (Exception e) {
             System.err.printf("Erro ao salvar Produto \n",
-            e.getMessage());
+                    e.getMessage());
         }
-      return sair;
+        return sair;
     }
+
 }

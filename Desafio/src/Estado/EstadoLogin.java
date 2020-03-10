@@ -19,29 +19,25 @@ public class EstadoLogin extends MaquinaEstado {
 
     @Override
     public boolean Executa() {
-         boolean sair = false;
+        boolean sair = false;
         Usuario user = new Usuario();
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Digite seu usuário");
         user.SetUsuario(scan.nextLine());
-        System.out.println("Digite sua senha");     
+        System.out.println("Digite sua senha");
         user.SetSenha(scan.nextLine());
         // TODO - Validação de senha
         UsuarioDAO DAO = new UsuarioDAO();
         int Flag = DAO.ValidaUsuario(user);
-        if (Flag != 3){  
-          user.SetFlag(Flag);
-          Config.getInstance().SetUsuario(user);
-          Desafio.estado = EnumEstadoConsole.MENU.getEstadoMaquina();
-        
-        }
-          
-        else {
+        if (Flag != 3) {
+            user.SetFlag(Flag);
+            Config.getInstance().SetUsuario(user);
+            Desafio.estado = EnumEstadoConsole.MENU.getEstadoMaquina();
+
+        } else {
             System.out.println("Dados inválidos!");
-        }            
+        }
         return sair;
     }
-    
 }
-

@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 package Estado;
+
 import java.util.Scanner;
 import desafio.Desafio;
+
 /**
  *
  * @author 082170006
@@ -16,11 +18,10 @@ public class EstadoMenu extends MaquinaEstado {
     public boolean Executa() {
         boolean sair = false;
         System.out.println("*** Seja Bem-Vindo ao sistema, escolha uma das opções abaixo");
-        System.out.println("0 - Sair\n 1 - Ir para a tela de Cadastros");
+        System.out.println("0 - Sair\n1 - Ir para a tela de Cadastros");
         Scanner scan = new Scanner(System.in);
         int opcao = scan.nextInt();
-        switch (opcao)
-        {
+        switch (opcao) {
             case 0:
                 Desafio.estado = EnumEstadoConsole.LOGIN.getEstadoMaquina();
                 break;

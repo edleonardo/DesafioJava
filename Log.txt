@@ -1,0 +1,12 @@
+Foi realizado o cadastro do Pedido de
+Foi realizado o cadastro do ClienteObjects.Cliente
+Foi realizado o cadastro do ClienteDAO.ClienteDAO
+Foi realizado o cadastro do ClienteDAO.ClienteDAO
+Foi realizado o cadastro do ClienteObjects.Cliente
+Foi realizado o cadastro do Cliente1
+Foi realizado o cadastro do Cliente 1
+Foi realizado o cadastro do Cliente 1
+Foi realizado o cadastro do Cliente 1
+Foi realizado o cadastro do Cliente 1
+Foi realizado o cadastro do null1
+Foi realizado o cadastro do Gerente 1

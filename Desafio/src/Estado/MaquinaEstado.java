@@ -10,7 +10,7 @@ package Estado;
  * @author 082170006
  */
 public abstract class MaquinaEstado {
+
     public abstract boolean Executa();
-    
-    
+
 }

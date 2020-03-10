@@ -10,21 +10,23 @@ package Objects;
  * @author 082170019
  */
 public class Produto {
+
     private String Descricao;
     private double preco;
-    
-    public String GetDescricao(){
-    return this.Descricao;
+
+    public String GetDescricao() {
+        return this.Descricao;
     }
-    public void SetDescricao(String Descricao){
-     this.Descricao = Descricao;
+
+    public void SetDescricao(String Descricao) {
+        this.Descricao = Descricao;
     }
-    
-    
-    public double GetPreco(){
-    return this.preco;
+
+    public double GetPreco() {
+        return this.preco;
     }
-    public void SetPreco(double Preco){
-     this.preco = Preco;
+
+    public void SetPreco(double Preco) {
+        this.preco = Preco;
     }
 }

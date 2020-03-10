@@ -10,7 +10,6 @@ import DAO.FuncionarioDAO;
 import DAO.UsuarioDAO;
 import Objects.Funcionario;
 import Objects.Usuario;
-import com.oracle.jrockit.jfr.DataType;
 import desafio.Desafio;
 import java.io.IOException;
 import java.util.Scanner;
@@ -38,15 +37,19 @@ public class EstadoCadastroFuncionario extends MaquinaEstado {
             System.out.println("Digite a senha");
             fun.SetSenha(scan.nextLine());
 
-            System.out.println("Digite a função 1 para gerente ou 0 para Vendedor");
+            System.out.println("Digite a função 0 para Vendedor ou 1 para Gerente");
+            int valorFuncao = Integer.parseInt(scan.nextLine());
 
-            if (Integer.parseInt(scan.nextLine()) != 1 || Integer.parseInt(scan.nextLine()) != 0) {
-               throw new Exception("Digite somente funções valídas");
+            if (valorFuncao > 1) {
+                throw new Exception("Digite somente funções valídas");
+            } else {
+                if(valorFuncao == 0) fun.SetFuncao("Vendedor");
+                else fun.SetFuncao("Gerente");
             }
-             fun.SetFlag(Integer.parseInt(scan.nextLine()));
-            // TODO - Validação de senha
+            fun.SetFlag(valorFuncao);
             FuncionarioDAO DAO = new FuncionarioDAO();
             DAO.SalvarFuncionario(fun);
+            DAO.SalvaLog(fun);
             Desafio.estado = EnumEstadoConsole.MENU.getEstadoMaquina();
 
         } catch (Exception e) {

@@ -12,28 +12,28 @@ import Objects.Usuario;
  * @author 082170006
  */
 public class Config {
+
     private static Config uniqueInstance;
     private static Usuario usuario;
-    
+
     private Config() {
-    
+
     }
-    
+
     public static synchronized Config getInstance() {
-        if (uniqueInstance == null)
+        if (uniqueInstance == null) {
             uniqueInstance = new Config();
-        
+        }
+
         return uniqueInstance;
     }
-   
-        
-    
-    public void SetUsuario(Usuario user){
-           usuario = user;
+
+    public void SetUsuario(Usuario user) {
+        usuario = user;
     }
-    
-   public  Usuario GetUsuario(){
-          return usuario ;
+
+    public Usuario GetUsuario() {
+        return usuario;
     }
-    
+
 }

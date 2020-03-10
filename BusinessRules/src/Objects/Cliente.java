@@ -7,13 +7,13 @@ package Objects;
 
 /**
  *
- * @author 082170019
+ * @author 082170006
  */
-public class Funcionario extends Usuario {
+public class Cliente {
 
     private String nome;
     private String SobreNome;
-    private String funcao;
+    private String Sexo;
 
     public void SetNome(String Nome) {
         this.nome = Nome;
@@ -31,12 +31,12 @@ public class Funcionario extends Usuario {
         return this.SobreNome;
     }
     
-    public void SetFuncao(String funcao) {
-        this.funcao = funcao;
+    public void SetSexo(String Sexo) {
+        this.Sexo = Sexo;
     }
 
-    public String GetFuncao() {
-        return this.funcao;
+    public String GetSexo() {
+        return this.Sexo;
     }
 
 }

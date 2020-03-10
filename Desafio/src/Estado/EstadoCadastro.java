@@ -20,18 +20,17 @@ public class EstadoCadastro extends MaquinaEstado {
     public boolean Executa() {
         boolean sair = false;
         System.out.println("*** Seja Bem-Vindo ao sistema, escolha uma das opções abaixo");
-        System.out.println("0 - Sair\n 1 - Cadastrar um Pedido\n 2 - Cadastrar um Produto\n 3 - Cadastrar um Cliente");
-        
+        System.out.println("0 - Sair\n1 - Cadastrar um Pedido\n2 - Cadastrar um Produto\n3 - Cadastrar um Cliente");
+
         Usuario user = Config.getInstance().GetUsuario();
-        
-        if(user.GetFlag() == 1){
+
+        if (user.GetFlag() == 1) {
             System.out.println("4 - Cadastrar um Funcionario");
         }
-        
+
         Scanner scan = new Scanner(System.in);
         int opcao = scan.nextInt();
-        switch (opcao)
-        {
+        switch (opcao) {
             case 0:
                 Desafio.estado = EnumEstadoConsole.LOGIN.getEstadoMaquina();
                 break;
@@ -43,13 +42,14 @@ public class EstadoCadastro extends MaquinaEstado {
                 break;
             case 3:
                 Desafio.estado = EnumEstadoConsole.CADASTRO_CLIENTE.getEstadoMaquina();
-                break;    
+                break;
             case 4:
-                if(user.GetFlag() == 1)
-                     Desafio.estado = EnumEstadoConsole.CADASTRO_FUNCIONARIO.getEstadoMaquina();
-                break;     
+                if (user.GetFlag() == 1) {
+                    Desafio.estado = EnumEstadoConsole.CADASTRO_FUNCIONARIO.getEstadoMaquina();
+                }
+                break;
         }
         return sair;
     }
-    
+
 }

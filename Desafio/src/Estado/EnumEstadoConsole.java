@@ -10,21 +10,21 @@ package Estado;
  * @author 082170006
  */
 public enum EnumEstadoConsole {
-    
-    LOGIN (new EstadoLogin()),
-    MENU (new EstadoMenu()),
-    CADASTRO (new EstadoCadastro()),
-    CADASTRO_PRODUTO (new EstadoCadastroProduto()),
-    CADASTRO_PEDIDO (new EstadoCadastroPedido()),
-    CADASTRO_FUNCIONARIO (new EstadoCadastroFuncionario()),
-    CADASTRO_CLIENTE (new EstadoCadastroCliente());
-    
-    private final MaquinaEstado estadoMaquina;   
-        
-    EnumEstadoConsole(MaquinaEstado estadoMaquina){
+
+    LOGIN(new EstadoLogin()),
+    MENU(new EstadoMenu()),
+    CADASTRO(new EstadoCadastro()),
+    CADASTRO_PRODUTO(new EstadoCadastroProduto()),
+    CADASTRO_PEDIDO(new EstadoCadastroPedido()),
+    CADASTRO_FUNCIONARIO(new EstadoCadastroFuncionario()),
+    CADASTRO_CLIENTE(new EstadoCadastroCliente());
+
+    private final MaquinaEstado estadoMaquina;
+
+    EnumEstadoConsole(MaquinaEstado estadoMaquina) {
         this.estadoMaquina = estadoMaquina;
     }
-    
+
     public MaquinaEstado getEstadoMaquina() {
         return estadoMaquina;
     }

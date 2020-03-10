@@ -5,9 +5,8 @@
  */
 package DAO;
 
-import Objects.Funcionario;
+import Objects.Cliente;
 import Objects.Usuario;
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -18,28 +17,20 @@ import java.io.PrintWriter;
  *
  * @author 082170019
  */
-public class FuncionarioDAO {
+public class ClienteDAO {
 
-    public void SalvarFuncionario(Funcionario fun) {
+    public void SalvarCliente(Cliente cli) {
 
         try {
-            String nome = "/home/atomic/Cursos/DesafioJava/Funcionario.txt";
+            String nome = "/home/atomic/Cursos/DesafioJava/Cliente.txt";
             FileWriter arq = new FileWriter(nome, true);
             BufferedWriter gravarArq = new BufferedWriter(arq);
-            gravarArq.write(fun.GetNome() + ";" + fun.GetSobreNome() + ";" + fun.GetFuncao());
+            gravarArq.write(cli.GetNome() + ";" + cli.GetSobreNome() + ";"
+                    + cli.GetSexo());
             gravarArq.newLine();
             gravarArq.flush();
-
-            String nome2 = "/home/atomic/Cursos/DesafioJava/Usuario.txt";
-            FileWriter arq2 = new FileWriter(nome2, true);
-            BufferedWriter gravarArq2 = new BufferedWriter(arq2);
-            gravarArq2.write(fun.GetUsuario() + ";" + fun.GetSenha() + ";" + fun.GetFlag());
-            gravarArq2.newLine();
-            gravarArq2.flush();
-
             arq.close();
-            arq2.close();
-            System.out.println("Funcionario Cadastrado com sucesso !");
+            System.out.println("Cleinte Cadastrado com sucesso !");
         } catch (IOException e) {
             System.err.printf("Erro na abertura do arquivo: %s.\n",
                     e.getMessage());
@@ -47,13 +38,13 @@ public class FuncionarioDAO {
 
     }
 
-    public void SalvaLog(Funcionario fun) {
+    public void SalvaLog(Cliente cli) {
         try {
             String nome = "/home/atomic/Cursos/DesafioJava/Log.txt";
             FileWriter arq = new FileWriter(nome, true);
             
             BufferedWriter gravarArq = new BufferedWriter(arq);
-            gravarArq.write("Foi realizado o cadastro do " + fun.GetFuncao() + " " + fun.GetNome());
+            gravarArq.write("Foi realizado o cadastro do Cliente " + cli.GetNome());
             gravarArq.newLine();
             gravarArq.flush();
 
@@ -65,5 +56,4 @@ public class FuncionarioDAO {
                     e.getMessage());
         }
     }
-
 }
