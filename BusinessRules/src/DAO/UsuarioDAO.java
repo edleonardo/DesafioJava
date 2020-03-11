@@ -18,7 +18,7 @@ public class UsuarioDAO {
     public int ValidaUsuario(Usuario user ){
            int retorno = 3;
                  try {
-                  String nome = "/home/atomic/Cursos/DesafioJava/Usuario.txt";
+                  String nome = System.getProperty("user.dir") + "/" + "Usuario.txt";
                   FileReader arq = new FileReader(nome);
                   BufferedReader lerArq = new BufferedReader(arq);
 

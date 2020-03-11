@@ -22,7 +22,7 @@ public class ClienteDAO {
     public void SalvarCliente(Cliente cli) {
 
         try {
-            String nome = "/home/atomic/Cursos/DesafioJava/Cliente.txt";
+            String nome = "/scr/BancoTxt/Cliente.txt";
             FileWriter arq = new FileWriter(nome, true);
             BufferedWriter gravarArq = new BufferedWriter(arq);
             gravarArq.write(cli.GetNome() + ";" + cli.GetSobreNome() + ";"
@@ -40,7 +40,7 @@ public class ClienteDAO {
 
     public void SalvaLog(Cliente cli) {
         try {
-            String nome = "/home/atomic/Cursos/DesafioJava/Log.txt";
+            String nome = "/scr/BancoTxt/Log.txt";
             FileWriter arq = new FileWriter(nome, true);
             
             BufferedWriter gravarArq = new BufferedWriter(arq);
