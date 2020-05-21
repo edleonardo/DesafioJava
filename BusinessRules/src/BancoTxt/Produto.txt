@@ -1,0 +1,9 @@
+Chave de Fenda;22.99
+Arroz;12.0
+Teste;25.0
+teste;44.0
+teste;22.0
+teste;12.0
+tete;2.0
+TESTETET ;222.0
+teste;2.0

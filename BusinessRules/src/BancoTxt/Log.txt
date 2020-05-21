@@ -1,0 +1,12 @@
+Foi realizado o cadastro do Produto: Teste -- Pelo usuario: teste Na hora: Thu May 21 12:05:52 BRT 2020
+Foi realizado o cadastro do Produto: Arroz -- Pelo usuario: teste Na hora: Thu May 21 12:06:06 BRT 2020
+Foi realizado o cadastro do Pedido: tete -- Pelo usuario: teste Na hora: Thu May 21 12:06:18 BRT 2020
+Foi realizado o cadastro do Pedido: TESTETET  -- Pelo usuario: teste Na hora: Thu May 21 12:06:31 BRT 2020
+Foi realizado o cadastro do Pedido: teste -- Pelo usuario: teste Na hora: Thu May 21 12:07:26 BRT 2020
+Foi realizado o cadastro do Pedido: teste -- Pelo usuario: teste Na hora: Thu May 21 12:07:26 BRT 2020
+Foi realizado o cadastro do Pedido: teste -- Pelo usuario: teste Na hora: Thu May 21 12:07:26 BRT 2020
+Foi realizado o cadastro do Pedido: teste -- Pelo usuario: teste Na hora: Thu May 21 12:07:26 BRT 2020
+Foi realizado o cadastro do Pedido: teste -- Pelo usuario: teste Na hora: Thu May 21 12:07:26 BRT 2020
+Foi realizado o cadastro do Pedido: teste -- Pelo usuario: teste Na hora: Thu May 21 12:07:26 BRT 2020
+Foi realizado o cadastro do Pedido: teste -- Pelo usuario: teste Na hora: Thu May 21 12:07:26 BRT 2020
+Foi realizado o cadastro do Pedido: teste -- Pelo usuario: teste Na hora: Thu May 21 12:07:26 BRT 2020
