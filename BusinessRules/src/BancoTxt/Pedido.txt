@@ -1,4 +1,7 @@
 Chave de Fenda;5
 Chave de Fenda;1
+<<<<<<< HEAD
 Teste;33
 Arroz;2
+=======
+>>>>>>> 98d2a0ff72c2c2072c2b2d72ea91940d67d53b9a

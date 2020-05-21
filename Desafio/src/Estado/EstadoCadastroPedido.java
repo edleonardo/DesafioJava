@@ -52,8 +52,12 @@ public class EstadoCadastroPedido extends MaquinaEstado {
             // TODO - Validação de senha
             PedidoDAO DAOPedido = new PedidoDAO();
             DAOPedido.SalvarPedido(pedido);
+<<<<<<< HEAD
             //SALVA MSG AUDITORIA PARA A THREAD SALVAR PARARELO
             Config.getInstance().SetMsgAuditoria("Produto", pedido.GetDescricao());
+=======
+            Config.getInstance().SalvarLog("Pedido", pedido.GetDescricao());
+>>>>>>> 98d2a0ff72c2c2072c2b2d72ea91940d67d53b9a
             System.out.println("Deseja imprimir?\n1 - Sim\nQualquer outra tecla - Não");
 
             if (Integer.parseInt(scan.nextLine()) == 1) {
