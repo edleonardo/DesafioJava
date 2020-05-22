@@ -54,7 +54,7 @@ public class EstadoCadastroPedido extends MaquinaEstado {
             DAOPedido.SalvarPedido(pedido);
 
             //SALVA MSG AUDITORIA PARA A THREAD SALVAR PARARELO
-            Config.getInstance().SetMsgAuditoria("Produto", pedido.GetDescricao());
+            Config.getInstance().SetMsgAuditoria("Pedido", pedido.GetDescricao());
 
             System.out.println("Deseja imprimir?\n1 - Sim\nQualquer outra tecla - Não");
 

@@ -36,7 +36,7 @@ public class EstadoCadastroProduto extends MaquinaEstado {
             DAO.SalvarProduto(prod);
 
              //SALVA MSG AUDITORIA PARA A THREAD SALVAR PARARELO
-            Config.getInstance().SetMsgAuditoria("Pedido", prod.GetDescricao());
+            Config.getInstance().SetMsgAuditoria("Produto", prod.GetDescricao());
 
             Desafio.estado = EnumEstadoConsole.MENU.getEstadoMaquina();
 
