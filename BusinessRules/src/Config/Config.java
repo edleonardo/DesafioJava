@@ -5,23 +5,20 @@
  */
 package Config;
 
-<<<<<<< HEAD
+
 import Objects.Auditoria;
-=======
->>>>>>> 98d2a0ff72c2c2072c2b2d72ea91940d67d53b9a
 import Objects.Comum;
 import Objects.Usuario;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-<<<<<<< HEAD
 import java.util.AbstractList;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
-=======
 import java.util.Date;
->>>>>>> 98d2a0ff72c2c2072c2b2d72ea91940d67d53b9a
+
 
 /**
  *
@@ -32,12 +29,9 @@ public class Config<E extends Comum> {
 
     private static Config uniqueInstance;
     private static Usuario usuario;
-<<<<<<< HEAD
-    private List<Auditoria> MsgAuditoria  = new ArrayList<Auditoria>();
+ private static List<String> MsgAuditoria  = Collections.synchronizedList(new ArrayList<>());
     private static boolean FlagAuditoria;
     ThreadAuditoria Thread  = new ThreadAuditoria();
-=======
->>>>>>> 98d2a0ff72c2c2072c2b2d72ea91940d67d53b9a
 
     private Config() {
 
@@ -46,8 +40,6 @@ public class Config<E extends Comum> {
     public static synchronized Config getInstance() {
         if (uniqueInstance == null) {
             uniqueInstance = new Config();
-<<<<<<< HEAD
-            
         }
         return uniqueInstance;
     }
@@ -68,29 +60,11 @@ public class Config<E extends Comum> {
         return FlagAuditoria;
     }
     public void SetMsgAuditoria(String Cadastrado, String Value){
-        Auditoria aut = new Auditoria();
-        aut.SetMsgAuditoria("Foi realizado o cadastro do " + Cadastrado + ": " + Value + " -- Pelo usuario: " + Config.getInstance().GetUsuario().GetUsuario() + " Na hora: " + new Date(System.currentTimeMillis()));
-        aut.SetFlagGravado(false);
-        MsgAuditoria.add(aut);
-    
+        MsgAuditoria.add("Foi realizado o cadastro do " + Cadastrado + ": " + Value + " -- Pelo usuario: " + Config.getInstance().GetUsuario().GetUsuario() + " Na hora: " + new Date(System.currentTimeMillis()));
     }
-    public void AlterarFlagAuditoria(int index){
-        MsgAuditoria.get(index).SetFlagGravado(true);
-    
-    }
-    public List<Auditoria> GetMsgAuditoria(){
+   public List<String> GetMsgAuditoria(){
         return MsgAuditoria;
-    
     }
-   
-            
-=======
-        }
-
-        return uniqueInstance;
-    }
->>>>>>> 98d2a0ff72c2c2072c2b2d72ea91940d67d53b9a
-
     public void SetUsuario(Usuario user) {
         usuario = user;
     }
@@ -105,29 +79,6 @@ public class Config<E extends Comum> {
         return path;
     }
 
-<<<<<<< HEAD
-    public void SalvarLog() {
-        
-=======
-    public void SalvarLog(String Cadastrado, String Value) {
-        try {
-            String nome = System.getProperty("user.dir") + "/src/BancoTxt/Log.txt";
-            String path = nome.replace("Desafio/", "BusinessRules/");
-            FileWriter arq = new FileWriter(path, true);
-
-            BufferedWriter gravarArq = new BufferedWriter(arq);
-            gravarArq.write("Foi realizado o cadastro do " + Cadastrado + ": " + Value + " -- Pelo usuario: " + Config.getInstance().GetUsuario().GetUsuario() + " Na hora: " + new Date(System.currentTimeMillis()));
-            gravarArq.newLine();
-            gravarArq.flush();
-
-            arq.close();
-
-            System.out.println("Log salvo com sucesso !");
-        } catch (IOException e) {
-            System.err.printf("Erro ao salvar log: %s.\n", e.getMessage());
-        }
->>>>>>> 98d2a0ff72c2c2072c2b2d72ea91940d67d53b9a
-
-    }
+    
 
 }

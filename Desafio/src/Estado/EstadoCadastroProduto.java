@@ -34,13 +34,10 @@ public class EstadoCadastroProduto extends MaquinaEstado {
             // TODO - Validação de senha
             ProdutoDAO DAO = new ProdutoDAO();
             DAO.SalvarProduto(prod);
-<<<<<<< HEAD
+
              //SALVA MSG AUDITORIA PARA A THREAD SALVAR PARARELO
             Config.getInstance().SetMsgAuditoria("Pedido", prod.GetDescricao());
-          
-=======
-              Config.getInstance().SalvarLog("Produto",prod.GetDescricao());
->>>>>>> 98d2a0ff72c2c2072c2b2d72ea91940d67d53b9a
+
             Desafio.estado = EnumEstadoConsole.MENU.getEstadoMaquina();
 
         } catch (NumberFormatException e) {

@@ -63,6 +63,9 @@ public class ProdutoDAO {
             System.err.printf("Erro na abertura do arquivo: %s.\n",
                     e.getMessage());
         }
+        catch (Exception e) {
+           
+        }
         return Lista;
     }
 

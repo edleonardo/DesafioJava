@@ -5,11 +5,9 @@
  */
 package Config;
 
-import Objects.Auditoria;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -24,22 +22,17 @@ public class ThreadAuditoria extends Thread {
         try  {
             while(Config.getInstance().GetFlagAuditoria()){
                 for(int x = 0; x< Config.getInstance().GetMsgAuditoria().size() ;x++){
-                        Auditoria MsgGravar = (Auditoria)Config.getInstance().GetMsgAuditoria().get(x);
-                        if(!MsgGravar.GetFlagGravado()){
-                            String nome = System.getProperty("user.dir") + "/src/BancoTxt/Log.txt";
-                            String path = nome.replace("Desafio/", "BusinessRules/");
-                            FileWriter arq = new FileWriter(path, true);
+                        String MsgGravar = (String)Config.getInstance().GetMsgAuditoria().get(x);
+                        String nome = System.getProperty("user.dir") + "/src/BancoTxt/Log.txt";
+                        String path = nome.replace("Desafio/", "BusinessRules/");
+                        FileWriter arq = new FileWriter(path, true);
+                        BufferedWriter gravarArq = new BufferedWriter(arq);
+                        gravarArq.write(MsgGravar);
+                        gravarArq.newLine();
+                        gravarArq.flush();
 
-                            BufferedWriter gravarArq = new BufferedWriter(arq);
-                            gravarArq.write(MsgGravar.GetMsgAuditoria());
-                            gravarArq.newLine();
-                            gravarArq.flush();
-
-                            arq.close();
-                            Config.getInstance().AlterarFlagAuditoria(x);
-                        }
-                   
-                        
+                        arq.close();
+                        Config.getInstance().GetMsgAuditoria().remove(x);    
                 }
                 
                 Thread.sleep(1000);

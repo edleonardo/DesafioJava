@@ -5,10 +5,9 @@
  */
 package desafio;
 
-<<<<<<< HEAD
+
 import Config.Config;
-=======
->>>>>>> 98d2a0ff72c2c2072c2b2d72ea91940d67d53b9a
+
 import Estado.EnumEstadoConsole;
 import Estado.MaquinaEstado;
 
@@ -23,10 +22,9 @@ public class Desafio {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-<<<<<<< HEAD
+
          Config.getInstance().StartThreadAuditoria();
-=======
->>>>>>> 98d2a0ff72c2c2072c2b2d72ea91940d67d53b9a
+
         estado = EnumEstadoConsole.LOGIN.getEstadoMaquina();
         Boolean saida = false;
         while(!saida) {

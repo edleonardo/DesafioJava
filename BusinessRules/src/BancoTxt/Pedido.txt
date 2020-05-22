@@ -5,3 +5,7 @@ Teste;33
 Arroz;2
 =======
 >>>>>>> 98d2a0ff72c2c2072c2b2d72ea91940d67d53b9a
+Chave de Fenda;2
+Chave de Fenda;2
+Chave de Fenda;2
+Chave de Fenda;1

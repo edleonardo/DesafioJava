@@ -52,12 +52,10 @@ public class EstadoCadastroFuncionario extends MaquinaEstado {
             fun.SetFlag(valorFuncao);
             FuncionarioDAO DAO = new FuncionarioDAO();
             DAO.SalvarFuncionario(fun);
-<<<<<<< HEAD
+
              //SALVA MSG AUDITORIA PARA A THREAD SALVAR PARARELO
             Config.getInstance().SetMsgAuditoria("Funcionario", fun.GetNome());
-=======
-            Config.getInstance().SalvarLog("Funcionario", fun.GetNome());
->>>>>>> 98d2a0ff72c2c2072c2b2d72ea91940d67d53b9a
+
             Desafio.estado = EnumEstadoConsole.MENU.getEstadoMaquina();
 
         } catch (NumberFormatException e) {

@@ -5,16 +5,13 @@
  */
 package Estado;
 
-<<<<<<< HEAD
+
 import Config.Config;
 import java.util.Scanner;
 import desafio.Desafio;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-=======
-import java.util.Scanner;
-import desafio.Desafio;
->>>>>>> 98d2a0ff72c2c2072c2b2d72ea91940d67d53b9a
+
 
 /**
  *
@@ -31,7 +28,7 @@ public class EstadoMenu extends MaquinaEstado {
         int opcao = scan.nextInt();
         switch (opcao) {
             case 0:
-<<<<<<< HEAD
+
             {
                 try {
                     Config.getInstance().StopThreadAuditoria();
@@ -43,10 +40,6 @@ public class EstadoMenu extends MaquinaEstado {
                 Desafio.estado = EnumEstadoConsole.LOGIN.getEstadoMaquina();
                 break;
 
-=======
-                Desafio.estado = EnumEstadoConsole.LOGIN.getEstadoMaquina();
-                break;
->>>>>>> 98d2a0ff72c2c2072c2b2d72ea91940d67d53b9a
             case 1:
                 Desafio.estado = EnumEstadoConsole.CADASTRO.getEstadoMaquina();
                 break;

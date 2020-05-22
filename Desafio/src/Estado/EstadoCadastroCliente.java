@@ -42,12 +42,9 @@ public class EstadoCadastroCliente extends MaquinaEstado {
             // TODO - Validação de senha
             ClienteDAO DAO = new ClienteDAO();
             DAO.SalvarCliente(cli);
-<<<<<<< HEAD
              //SALVA MSG AUDITORIA PARA A THREAD SALVAR PARARELO
             Config.getInstance().SetMsgAuditoria("Cliente", cli.GetNome());
-=======
-            Config.getInstance().SalvarLog("Cliente", cli.GetNome());
->>>>>>> 98d2a0ff72c2c2072c2b2d72ea91940d67d53b9a
+
             Desafio.estado = EnumEstadoConsole.MENU.getEstadoMaquina();
 
         } catch (Exception e) {

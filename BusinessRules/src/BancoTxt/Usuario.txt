@@ -1,2 +1,3 @@
 Gabriel;Ftt2020;1
 teste;teste;1
+1;1;0
